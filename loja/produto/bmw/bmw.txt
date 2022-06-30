@@ -1,0 +1,58 @@
+{
+    "pid": "2",
+    "nome": "BMW",
+    "tipo": "carro",
+    "marca": "BMW",
+    "medida": "unidade",
+    "descricao": {
+        "texto": "Carro seminovo dispon\u00edvel para entrega imediata",
+        "caracteristicas": {
+            "c\u00e2mbio": "autom\u00e1tico",
+            "tra\u00e7\u00e3o": "dianteira",
+            "portas": "2"
+        }
+    },
+    "preco": {
+        "moeda": "R$",
+        "valor": "390000.00"
+    },
+    "desconto": {
+        "quantidade": "12",
+        "tipo": "porcentagem"
+    },
+    "frete": {
+        "gratis": "1",
+        "limiar": "valor",
+        "quantidade": "0"
+    },
+    "sku": {
+        "BMWBR": {
+            "guid": "8AA88030-F81B-9083-F014-6D823AD829A6",
+            "atributos": {
+                "cor": "branco"
+            },
+            "estoque": {
+                "codigodebarras": "1234567890",
+                "quantidade": "10",
+                "gramas": "1350",
+                "altura": "150",
+                "largura": "350",
+                "profundidade": "500"
+            }
+        },
+        "BMWPR": {
+            "guid": "556F9417-C207-0C94-B4AE-A962FDB5D27F",
+            "atributos": {
+                "cor": "preto"
+            },
+            "estoque": {
+                "codigodebarras": "1234567890",
+                "quantidade": "10",
+                "gramas": "1350",
+                "altura": "150",
+                "largura": "350",
+                "profundidade": "500"
+            }
+        }
+    }
+}

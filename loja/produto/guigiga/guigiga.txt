@@ -1,0 +1,61 @@
+{
+    "pid": "1",
+    "nome": "Guigiga",
+    "tipo": "t-shirt",
+    "marca": "Boa",
+    "medida": "unidade",
+    "descricao": {
+        "texto": "Uma camisa bonita",
+        "caracteristicas": {
+            "gola": "redonda",
+            "estampa": "lisa",
+            "material": "algod\u00e3o"
+        }
+    },
+    "preco": {
+        "moeda": "R$",
+        "valor": "100.00",
+        "desconto": "10"
+    },
+    "desconto": {
+        "quantidade": "10",
+        "tipo": "porcentagem"
+    },
+    "frete": {
+        "gratis": "1",
+        "limiar": "valor",
+        "quantidade": "0"
+    },
+    "sku": {
+        "GUIGIGABRP": {
+            "guid": "8AA88030-F81B-9083-F014-6D823AD829A6",
+            "atributos": {
+                "tamanho": "p",
+                "cor": "branco"
+            },
+            "estoque": {
+                "codigodebarras": "1234567890",
+                "quantidade": "10",
+                "gramas": "350",
+                "altura": "50",
+                "largura": "35",
+                "profundidade": "5"
+            }
+        },
+        "GUIGIGABRG": {
+            "guid": "556F9417-C207-0C94-B4AE-A962FDB5D27F",
+            "atributos": {
+                "tamanho": "g",
+                "cor": "branco"
+            },
+            "estoque": {
+                "codigodebarras": "1234567890",
+                "quantidade": "10",
+                "gramas": "350",
+                "altura": "50",
+                "largura": "35",
+                "profundidade": "5"
+            }
+        }
+    }
+}

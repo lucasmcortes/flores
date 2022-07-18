@@ -1,0 +1,44 @@
+{
+    "pid": "5",
+    "nome": "Mangiori",
+    "tipo": "planta",
+    "marca": "Natural",
+    "medida": "unidade",
+    "descricao": {
+        "texto": "Planta muito interessante",
+        "caracteristicas": {
+            "nacionalidade": "brasileira",
+            "c\u00e9lulas": "eucariontes",
+            "n\u00facleo": "delimitado"
+        }
+    },
+    "preco": {
+        "moeda": "R$",
+        "valor": "936.99"
+    },
+    "desconto": {
+        "quantidade": "0",
+        "tipo": "porcentagem"
+    },
+    "frete": {
+        "gratis": "1",
+        "limiar": "valor",
+        "quantidade": "0"
+    },
+    "sku": {
+        "MANGIORIBR": {
+            "guid": "910EF06F-8153-89E4-9C60-42FDC99D8DA3",
+            "atributos": {
+                "cor": "branco"
+            },
+            "estoque": {
+                "codigodebarras": "4567890123",
+                "quantidade": "10",
+                "gramas": "220",
+                "altura": "40",
+                "largura": "130",
+                "profundidade": "34"
+            }
+        }
+    }
+}

@@ -35,27 +35,29 @@
 			// do {
 			// 	$guid = mb_strtoupper(Guid());
 			// } while ($guid==$produto['guid']);
-			//
+
+			// echo $guid;
+
 			// $jsonproduto = array(
-			// 	"pid"=>"2",
-			// 	"nome"=>"BMW",
-			// 	"tipo"=>"carro",
-			// 	"marca"=>'BMW',
+			// 	"pid"=>"5",
+			// 	"nome"=>"Mangiori",
+			// 	"tipo"=>"planta",
+			// 	"marca"=>'Natural',
 			// 	"medida"=>"unidade",
 			// 	"descricao"=>array(
-			// 	 	'texto'=>'Carro seminovo disponível para entrega imediata',
+			// 	 	'texto'=>'Planta muito interessante',
 			// 	 	'caracteristicas'=>array(
-			// 	 		'câmbio'=>'automático',
-			// 	 		'tração'=>'dianteira',
-			// 			'portas'=>'2'
+			// 	 		'nacionalidade'=>'brasileira',
+			// 	 		'células'=>'eucariontes',
+			// 			'núcleo'=>'delimitado'
 			// 		),
 			// 	 ),
 			// 	 "preco"=>array(
 			// 	 	"moeda"=>"R$",
-			// 	 	"valor"=>"390000.00"
+			// 	 	"valor"=>"936.99"
 			// 	 ),
 			// 	 "desconto"=>array(
-			// 	 	"quantidade"=>"10",
+			// 	 	"quantidade"=>"0",
 			// 	 	"tipo"=>"porcentagem"
 			// 	 ),
 			// 	 "frete"=>array(
@@ -64,32 +66,18 @@
 			// 	 	"quantidade"=>"0"
 			// 	 ),
 			// 	"sku"=>array(
-			// 		"BMWBR"=> array(
-			// 			"guid"=>"8AA88030-F81B-9083-F014-6D823AD829A6",
+			// 		"MANGIORIBR"=> array(
+			// 			"guid"=>$guid,
 			// 			"atributos"=>array(
 			// 				"cor"=>"branco"
 			// 			),
 			// 			"estoque"=>array(
-			// 				"codigodebarras"=>"1234567890",
+			// 				"codigodebarras"=>"4567890123",
 			// 				"quantidade"=>"10",
-			// 				"gramas"=>"1350",
-			// 				"altura"=>"150",
-			// 				"largura"=>"350",
-			// 				"profundidade"=>"500"
-			// 			),
-			// 		),
-			// 		"BMWPR"=> array(
-			// 			"guid"=>"556F9417-C207-0C94-B4AE-A962FDB5D27F",
-			// 			"atributos"=>array(
-			// 				"cor"=>"preto"
-			// 			),
-			// 			"estoque"=>array(
-			// 				"codigodebarras"=>"1234567890",
-			// 				"quantidade"=>"10",
-			// 				"gramas"=>"1350",
-			// 				"altura"=>"150",
-			// 				"largura"=>"350",
-			// 				"profundidade"=>"500"
+			// 				"gramas"=>"220",
+			// 				"altura"=>"40",
+			// 				"largura"=>"130",
+			// 				"profundidade"=>"34"
 			// 			),
 			// 		),
 			// 	),
@@ -98,6 +86,7 @@
 			// $nomeproarquivoepasta = mb_strtolower(Acentuadas($jsonproduto['nome']));
 			// $pasta = __DIR__.'/'.$nomeproarquivoepasta;
 			// criarPastaProduto($pasta);
+			// mkdir($pasta.'/img', 0755, true);
 			//
 			// $insereproduto = json_encode($jsonproduto, JSON_PRETTY_PRINT);
 			// $nomearquivo = $nomeproarquivoepasta.'.txt';

@@ -81,7 +81,7 @@
 				} else {
 					$mostra = "
 						<div style='position:relative;margin:5px auto;'>
-							<img style='max-width:300px;width:100%;height:auto;' src='".$dominio."/img/2011212323.png'></img>
+							<!-- <img style='max-width:300px;width:100%;height:auto;' src='".$dominio."/img/2011212323.png'></img> -->
 							<div style='position:absolute;text-align:center;top:34%;right:0;left:0;'>
 								<p style='padding:1% 3%;border-radius:var(--circulo);background-color:var(--amarelo);display:inline-block;'>
 									O carrinho está preparado para as suas compras

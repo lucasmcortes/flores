@@ -1,0 +1,44 @@
+{
+    "pid": "3",
+    "nome": "Muntem",
+    "tipo": "planta",
+    "marca": "Natural",
+    "medida": "unidade",
+    "descricao": {
+        "texto": "Planta muito bonita para qualquer lugar",
+        "caracteristicas": {
+            "nacionalidade": "brasileira",
+            "c\u00e9lulas": "eucariontes",
+            "n\u00facleo": "delimitado"
+        }
+    },
+    "preco": {
+        "moeda": "R$",
+        "valor": "179.90"
+    },
+    "desconto": {
+        "quantidade": "30",
+        "tipo": "porcentagem"
+    },
+    "frete": {
+        "gratis": "1",
+        "limiar": "valor",
+        "quantidade": "0"
+    },
+    "sku": {
+        "MUNTEMBR": {
+            "guid": "AF989176-4EF2-832B-B1B1-24FEC565ED84",
+            "atributos": {
+                "cor": "branco"
+            },
+            "estoque": {
+                "codigodebarras": "2345678901",
+                "quantidade": "10",
+                "gramas": "300",
+                "altura": "80",
+                "largura": "120",
+                "profundidade": "45"
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pid": "4",
+    "nome": "Veorli",
+    "tipo": "planta",
+    "marca": "Natural",
+    "medida": "unidade",
+    "descricao": {
+        "texto": "Planta muito chique",
+        "caracteristicas": {
+            "nacionalidade": "brasileira",
+            "c\u00e9lulas": "eucariontes",
+            "n\u00facleo": "delimitado"
+        }
+    },
+    "preco": {
+        "moeda": "R$",
+        "valor": "339.90"
+    },
+    "desconto": {
+        "quantidade": "0",
+        "tipo": "porcentagem"
+    },
+    "frete": {
+        "gratis": "0",
+        "limiar": "valor",
+        "quantidade": "0"
+    },
+    "sku": {
+        "VEORLIBR": {
+            "guid": "6AACF46D-E606-9556-3C4B-A517B9CD6A53",
+            "atributos": {
+                "cor": "branco"
+            },
+            "estoque": {
+                "codigodebarras": "3456789012",
+                "quantidade": "10",
+                "gramas": "100",
+                "altura": "80",
+                "largura": "120",
+                "profundidade": "45"
+            }
+        }
+    }
+}

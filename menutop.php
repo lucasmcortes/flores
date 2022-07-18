@@ -67,7 +67,7 @@
 
                 <div id='abrecarrinhofixed' class='carrinhofixed mostracarrinho'>
                         <span class='info' aria-label='carrinho'>
-                                <div style='position:relative;display:flex;align-items:center;height:34px;width:34px;background-color:var(--bege);border-radius:var(--circulo);'>
+                                <div style='position:relative;display:flex;align-items:center;height:55px;width:55px;background-color:var(--verdeclaro);border:1px solid var(--brancomesmo);border-radius:var(--circulo);'>
                                         <div class='carrinhonotificacao'><p>".$qntitenscarrinho."</p></div>
                                         <img style='max-width:21px;' src='".$dominio."/img/carrinho.png'></img>
                                 </div>
@@ -120,6 +120,7 @@
                                 abreCarrinho();
                         });
 
+                        /*
                         $(document).ready(function() {
                                 podefecharmenutopporcausadocarrinho = 1;
                                 var prevScrollpos = window.pageYOffset;
@@ -137,6 +138,7 @@
                                         prevScrollpos = currentScrollPos;
                                 }
                         });
+                        */
                 </script>
         ";
 

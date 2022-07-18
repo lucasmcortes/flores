@@ -66,21 +66,6 @@
 		?>
 		</div> <!-- produtoswrap -->
 
-		<script>
-			$('.wrapitemloja').on('click',function() {
-				window.location.href='<?php echo $dominio ?>/loja/produto/'+$(this).data('item');
-			});
-
-			$('.wrapitemloja').hover(
-	                        function() {
-	                                $(this).addClass('sombrawrapitemloja');
-	                        }, function() {
-	                                $(this).removeClass('sombrawrapitemloja');
-	                        }
-	                );
-		</script>
-
-
 	</div>
 	<!-- conteudo -->
 

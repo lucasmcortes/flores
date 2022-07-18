@@ -67,7 +67,7 @@
 								<p class='preco' data-preco='".$produto['preco']['valor']."'>
 								";
 								if ($produto['desconto']['quantidade']>0) {
-									echo  "<span style='font-size:13px;text-decoration:line-through;'>".Dinheiro($produto['preco']['valor'])."</span> <span style='min-width:100%;display:inline-block;font-size:13px;'>com ".$desconto."</span> <span style='font-size:34px;min-width:100%;display:inline-block;'>".Dinheiro($produto['preco']['atual'])."</span>";
+									echo  "<span style='font-size:13px;text-decoration:line-through;'>".Dinheiro($produto['preco']['valor'])."</span> <span style='min-width:100%;display:inline-block;font-size:13px;'>com ".$desconto."</span> <span style='font-size:26px;min-width:100%;display:inline-block;'>".Dinheiro($produto['preco']['atual'])."</span>";
 								} else {
 									echo "<span style='font-size:34px;'>".Dinheiro($produto['preco']['valor'])."</span>";
 								} // se tá com desconto
@@ -204,7 +204,6 @@
 				Progresso();
 				Selecionadas();
 				$('.adicionar').on('click',function() {
-
 					if (escolhas===selecionadas) {
 						const opcoesselecionadas = {};
 						$('.lista').each(function() {

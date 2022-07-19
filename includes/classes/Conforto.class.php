@@ -20,7 +20,7 @@
 						$sku = new ConsultaProduto($this->uid);
 						$sku = $sku->Produto($item['pid']);
 
-						$produto = parent::Produto($item['pid']);
+						$produto = parent::ConsultaProduto($item['pid']);
 						$mostra .= "
 							<div class='mostraitemcarrinhowrap' data-lugar='".$item['cid']."'>
 								<div class='carrinhoimg'>
@@ -220,6 +220,66 @@
 					redirectToLogin();
 				}
 			} // PermissaoComprar
+
+			public function Showcase($pid) {
+
+				global $dominio;
+
+				$produto = parent::ConsultaProduto($pid);
+				$item = new ConsultaProduto($this->uid);
+				$item = $item->Produto($pid);
+
+				echo "
+					<div class='wrapitemloja' data-item='".$produto['url']."'>
+						<div class='innerwrapitemloja'>
+				";
+				if ($item['desconto']['quantidade']>0) {
+					echo "<p class='descontoitemloja'>".$item['desconto']['exibicao']."</p>";
+				}
+				echo "
+							<div class='wrapimgloja'>
+								<img class='imgloja' alt='".$item['nome']."' title='".$item['nome']."' aria-label='".$item['nome']."' src='".$dominio."/loja/produto/".$produto['url']."/img/".reset($item['imagens'])."'></img>
+							</div>
+							<div class='wrapinfoloja'>
+								<p class='nomeitemloja'>".$item['nome']."</p>
+								<div class='precoitemloja'>
+				";
+
+				if ($item['desconto']['quantidade']>0) {
+					echo "<p class='precodescontoloja'>".Dinheiro($item['preco']['valor'])."</p>";
+				}
+
+				echo "
+									<p class='precoatual'>".Dinheiro($item['preco']['atual'])."</p>
+								</div>
+							</div>
+				";
+							$listas = array_keys($item['listas']);
+							$c=1;
+							foreach ($listas as $lista) {
+								if ($lista=='cor') {
+									echo "
+										<div class='lojacoreswrap'>
+									";
+									foreach ($item['listas'][$lista] as $cor) {
+										if ($c==1) {echo"<div class='lojacorescontainer'>";}
+										CoresTranslator($cor);
+										if ($c / 5 == 1) {echo "</div>";}
+										$c++;
+									} // cada opcao
+									echo "
+									</div> <!-- lojacoreswrap -->
+									";
+								} // cor
+							} // foreach lista
+				echo "
+						</div>
+					</div>
+
+						<p class='botaoitemloja'>ver produto →</p>
+					</div>
+				";
+			} // Showcase
 
 	} // conforto
 

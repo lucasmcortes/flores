@@ -9,82 +9,32 @@
 
 		<!-- wrap intro -->
 		<div style='min-width:100%;max-width:100%;margin:0 auto;'>
+
 			<!-- section -->
-			<div class='sectionwrap' style='/*background-image:url(<?php echo $dominio ?>/img/olia-gozha-9A_peGrSbZc-unsplash.jpg);*/background-color:aquamarine;'>
-				<div class='sectiontexto' style='float:right;'>
-					<div class='passos'>
-						<p class='descindex' style='text-align:right;'>
-							Flores e plantas
-						</p>
-						<p class='descindexmenor' style='text-align:right;'>
-							Decore seus ambientes com mais vida! Agende uma visita e veja como tudo pode ser melhor.
-						</p>
-					</div>
+			<div class='sectionwrap'>
+				<div class='txtintrowrap'>
+					<p class='txtintro'>
+						Flores e plantas
+						<span class='txtintrospan'>
+							Sua vida mais bonita
+						</span>
+					</p>
+					<p class='botaointro'>
+						conheça a loja
+					</p>
 				</div>
 			</div>
 			<!-- section -->
-			<div class='produtoswrap'>
 
+			<div class='produtoswrap'>
 			<?php
 				$produtos = new ConsultaDatabase($uid);
 				$produtos = $produtos->Produtos();
 				if ($produtos[0]['pid']!=0) {
 					foreach ($produtos as $produto) {
 						if ($produto['ativo']!=0) {
-							$item = new ConsultaProduto($uid);
-							$item = $item->Produto($produto['pid']);
-							echo "
-								<div class='wrapitemloja' data-item='".$produto['url']."'>
-									<div class='innerwrapitemloja'>
-							";
-							if ($item['desconto']['quantidade']>0) {
-								echo "<p class='descontoitemloja'>".$item['desconto']['exibicao']."</p>";
-							}
-							echo "
-										<div class='wrapimgloja'>
-							";
-
-							if (!reset($item['imagens'])) {
-								echo "<img class='imgloja' alt='".$item['nome']."' title='".$item['nome']."' aria-label='".$item['nome']."' src='".$dominio."/img/addimg.png'></img>";
-							} else {
-								echo "<img class='imgloja' alt='".$item['nome']."' title='".$item['nome']."' aria-label='".$item['nome']."' src='".$dominio."/loja/produto/".$produto['url']."/img/".reset($item['imagens'])."'></img>";
-							} // imagem produto
-
-							echo "
-										</div>
-										<div class='wrapinfoloja'>
-											<p class='nomeitemloja'>".$item['nome']."</p>
-											<div class='precoitemloja'>
-												<p class='precodescontoloja'>".Dinheiro($item['preco']['valor'])."</p>
-												<p class='precoatual'>".Dinheiro($item['preco']['atual'])."</p>
-											</div>
-										</div>
-							";
-										$listas = array_keys($item['listas']);
-										$c=1;
-										foreach ($listas as $lista) {
-											if ($lista=='cor') {
-												echo "
-													<div class='lojacoreswrap'>
-												";
-												foreach ($item['listas'][$lista] as $cor) {
-													if ($c==1) {echo"<div class='lojacorescontainer'>";}
-													CoresTranslator($cor);
-													if ($c / 5 == 1) {echo "</div>";}
-													$c++;
-												} // cada opcao
-												echo "
-												</div> <!-- lojacoreswrap -->
-												";
-											} // cor
-										} // foreach lista
-							echo "
-									</div>
-								</div>
-
-									<p class='botaoitemloja'>ver produto →</p>
-								</div>
-							";
+							$showcase = new Conforto($uid);
+							$showcase = $showcase->Showcase($produto['pid']);
 						} // produto ativo
 					} // foreach produtos
 				} // pid != 0
@@ -92,7 +42,7 @@
 			</div> <!-- produtoswrap -->
 
 			<!-- section -->
-			<div class='sectionwrap' style='/*background-image:url(<?php echo $dominio ?>/img/doug-kelley-rPDuuBEtFI8-unsplash.jpg);*/background-color:orchid;'>
+			<div class='sectionwrap' style='min-height:34vh;/*background-image:url(<?php echo $dominio ?>/img/doug-kelley-rPDuuBEtFI8-unsplash.jpg);*/'>
 				<!-- como funciona -->
 				<div style='min-width:100%;max-width:100%;display:inline-block;'>
 					<p class='titulop' style='margin-top:3%;'>
@@ -101,40 +51,40 @@
 					<div class='comofuncionaouterwrap'>
 						<div class='comofuncionawrap'>
 							<div class='comofuncionaimg'>
-								<img style='width:auto;max-width:55px;height:auto;' src='https://www.ophanim.com.br/img/0111211043.png'></img>
+								<img style='width:auto;max-width:55px;height:auto;' src='<?php echo $dominio ?>/img/truck-icon.png'></img>
 							</div>
 							<div class='comofuncionatexto'>
 								<p class='comofazemostitle'>
-									Identidade
+									Entrega
 								</p>
 								<p class='comofazemosdesc'>
-									Evidenciamos as melhores características da sua marca através de dispositivos físicos e digitais
+									Peços de incríveis para entrega e produtos com entrega grátis
 								</p>
 							</div>
 						</div>
 						<div class='comofuncionawrap'>
 							<div class='comofuncionaimg'>
-								<img style='width:auto;max-width:55px;height:auto;' src='https://www.ophanim.com.br/img/0111211058.png'></img>
+								<img style='width:auto;max-width:55px;height:auto;' src='<?php echo $dominio ?>/img/clock-icon.png'></img>
 							</div>
 							<div class='comofuncionatexto'>
 								<p class='comofazemostitle'>
-									Expressão
+									Prazo
 								</p>
 								<p class='comofazemosdesc'>
-									Potencialização da comunicação da sua empresa com os seus clientes em mídias impressas e sociais
+									Tenha os produtos com você rapidamente
 								</p>
 							</div>
 						</div>
 						<div class='comofuncionawrap'>
 							<div class='comofuncionaimg'>
-								<img style='width:auto;max-width:55px;height:auto;' src='https://www.ophanim.com.br/img/0111211101.png'></img>
+								<img style='width:auto;max-width:55px;height:auto;' src='<?php echo $dominio ?>/img/bag-icon.png'></img>
 							</div>
 							<div class='comofuncionatexto'>
 								<p class='comofazemostitle'>
-									Atenção
+									Produtos
 								</p>
 								<p class='comofazemosdesc'>
-									As demandas do público interpretadas para aprimoramento da atuação no mercado
+									Os melhores produtos selecionados pra você
 								</p>
 							</div>
 						</div>
@@ -143,8 +93,9 @@
 				<!-- como funciona -->
 			</div>
 			<!-- section -->
+
 			<!-- section -->
-			<div class='sectionwrap' style='/*background-image:url(<?php echo $dominio ?>/img/tanalee-youngblood-kkJuQhp9Kw0-unsplash.jpg);*/background-color:forestgreen;'>
+			<div class='sectionwrap' style='/*background-image:url(<?php echo $dominio ?>/img/olia-gozha-9A_peGrSbZc-unsplash.jpg);*/background-color:azure;'>
 				<div class='sectiontexto' style='float:right;'>
 					<div class='passos'>
 						<p class='descindex' style='text-align:right;'>
@@ -153,6 +104,34 @@
 						<p class='descindexmenor' style='text-align:right;'>
 							Decore seus ambientes com mais vida! Agende uma visita e veja como tudo pode ser melhor.
 						</p>
+					</div>
+				</div>
+			</div>
+			<!-- section -->
+
+			<!-- section -->
+			<div class='sectionwrap' style='min-height:34vh;/*background-image:url(<?php echo $dominio ?>/img/tanalee-youngblood-kkJuQhp9Kw0-unsplash.jpg);*/'>
+				<div style='min-width:80%;max-width:80%;margin:0 auto;'>
+					<div id='testedriveinnerwrap' style='display:flex;flex-direction:column;padding:5% 8%;padding-top:3%;'>
+						<p id='testedrivetitle' class='titulop'>
+							Inscreva-se
+						</p>
+						<div id='chamadatestedrive' style='flex:1;'>
+							<p class='retorno'>Receba informações sobre descontos e novidades</p>
+						</div>
+						<div id='formulariotestedrive' style='flex:1;margin-top:3%;'>
+							<div class='formularioemaillandingpage'>
+								<div style='flex:1;'>
+									<label>Seu nome completo</label>
+									<input style='min-width:100%;' type='text' placeholder='Seu nome' name='nome' id='nomedrive'>
+								</div>
+								<div style='flex:1;'>
+									<label>Seu melhor e-mail</label>
+									<input style='min-width:100%;' type='email' placeholder='E-mail' name='email' id='emaildrive'>
+								</div>
+							</div>
+						</div>
+						<p id='testedrive' class='individualcta' style='margin:revert;text-align:center;cursor:pointer;box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;'>Receber</p>
 					</div>
 				</div>
 			</div>
@@ -162,6 +141,12 @@
 
 	</div>
 	<!-- conteudo -->
+
+	<script>
+		$('.botaointro').on('click', function() {
+			window.location.href='<?php echo $dominio ?>/loja/';
+		});
+	</script>
 
 <?php
 	require_once __DIR__.'/rodape.php';

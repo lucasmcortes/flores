@@ -304,7 +304,7 @@
 			return $this->resultado = $resultado;
 		} // Produtos
 
-		public function Produto($pid) {
+		public function ConsultaProduto($pid) {
 			$sql = "
 				SELECT *
 				FROM produtos

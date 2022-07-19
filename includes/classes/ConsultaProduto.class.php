@@ -13,7 +13,7 @@
 			$produto = [];
 			$variacoes = [];
 
-			$produtodb = parent::Produto($pid);
+			$produtodb = parent::ConsultaProduto($pid);
 			if ($produtodb['ativo']!=0) {
 				$produto = json_decode(file_get_contents(implode(glob(__DIR__.'/../../loja/produto/'.$produtodb['url'].'/'.$produtodb['url'].'.txt', GLOB_BRACE))),true);
 				$imagens = glob(__DIR__.'/../../loja/produto/'.$produtodb['url'].'/img/*', GLOB_BRACE);
